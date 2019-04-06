@@ -1,0 +1,15 @@
+<link href={{url_for('static',filename = 'css/preview.css')}} rel="stylesheet" type="text/css" media="all"/>
+<h1>CSS Image Hover Effects</h1>
+<p>← <a href="https://www.nxworld.net/tips/css-image-hover-effects.html" target="_blank">View the article</a></p>
+
+<h2 id="demo15">Final Output</h2>
+<div class="hover15 column">
+  <div>
+    <figure><img src={{url_for('static',filename = original)}} /></figure>
+    <span>Image</span>
+  </div>
+  <div>
+    <figure><img src={{url_for('static',filename = 'style'+str(original)}} /></figure>
+    <span>Result</span>
+  </div>
+</div>
