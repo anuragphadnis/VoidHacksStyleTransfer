@@ -29,20 +29,21 @@ def upload_file():
 		# check if the post request has the file part
 		if 'photos' not in request.files:
 			flash('No file part')
-			return "Nahi huai"
+			return render_template(upload.html,error = "Please upload a file")
 		file = request.files['photos']
 		# if user does not select file, browser also
 		# submit an empty part without filename
 		if file.filename == '':
 			flash('No selected file')
-			return "Failed to upload"
+			return render_template(upload.html,error = "Error File not found, please try again.")
 		if file and allowed_file(file.filename):
 			filename = secure_filename(file.filename)
 			file.save(os.path.join('static/uploads/'+str(file.filename)))
+			print(request.form['choice'])
 			callit(img = 'static/uploads/'+str(file.filename) ,filter = request.form['filter'],roi=request.form["choice"])
 			return render_template('preview.html',original = 'uploads/'+str(filename),newimg = 'images/style'+str(filename))
 		else:
-			return "Sorry Master"
+			return render_template(upload.html,error = "Error while storing file, Please try again")
 if __name__ == "__main__":
 	app.secret_key = os.urandom(24)
-	app.run( debug =True)
+	app.run(port=5001, debug =True)

@@ -8,6 +8,7 @@ class test():
     def __init__(self, mode ):
         self.MODEL_PATH = {"mosaic": "mosaic.pth", "candy" :"candy.pth", "rain_princess": "rain_princess.pth", "udnie": "udnie.pth"}
         self.mode = mode
+        print(mode)
         if self.mode == "complete":
             self.mode_set = False
         else:
@@ -51,6 +52,7 @@ class test():
                 styled = cv2.bitwise_or(threshFore, styled)
                 final = cv2.bitwise_and(Background, styled)
             elif self.mode == "background":
+                print("hello")
                 threshBack = cv2.cvtColor(threshBack, cv2.COLOR_GRAY2BGR)
                 Background = cv2.bitwise_or(threshBack, original)
                 cv2.imwrite("static/images/ImageForStyling.jpg",Background)
@@ -72,6 +74,5 @@ class test():
             final = cv2.imread("static/images/styled.jpg")
         #final = cv2.resize(final, (dims[1],dims[0]))
         filename = list(image.split("/"))[-1]
-        print("hello")
         cv2.imwrite("static/images/style"+filename, final)
         return ["static/images/style"+filename,"static/images/styled.jpg"]
