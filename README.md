@@ -45,8 +45,8 @@ train one network per style target. For single-image super-resolution, the input
 image x is a low-resolution input, the content target yc is the ground-truth highresolution image, and the style reconstruction loss is not used; we train one
 network per super-resolution factor.
 
-Dependencies of the system:
-open-cv
-tensorflow
-pytorch
-flask
+#Dependencies:
+- open-cv
+- tensorflow
+- pytorch
+- flask
