@@ -23,6 +23,6 @@ python3 Pixeffect.py
 ```
 
 ## Other Creators 
-@anuragphadnis
-@amanshah008
-@KrishLalwani
+> [Anurag Phadnis](https://github.com/anuragphadnis)\
+> [Aman Shah](https://github.com/amanshah008)\
+> [Krish Lalwani](https://github.com/KrishLalwani)
