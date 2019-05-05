@@ -9,6 +9,19 @@ The Web App provides three option for styling image on given 4 styles:
 
 The App is also capable of styling images containing no human figures provided the complete mode is selected.
 
+# Sample Result Images
+- Complete 
+  
+![Complete](static/assets/styled.jpg)
+
+- Background 
+
+![Background](static/assets/stylechild-1241825_960_720.jpg)
+
+- Foreground 
+- 
+![Foreground](static/assets/stylepic02.jpg)
+
 # Dependencies:
 - open-cv
 - tensorflow

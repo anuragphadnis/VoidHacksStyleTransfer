@@ -49,7 +49,6 @@ class ProcessImage():
                 styled = cv2.bitwise_or(threshFore, styled)
                 final = cv2.bitwise_and(Background, styled)
             elif self.mode == "background":
-                print("hello")
                 threshBack = cv2.cvtColor(threshBack, cv2.COLOR_GRAY2BGR)
                 Background = cv2.bitwise_or(threshBack, original)
                 cv2.imwrite("static/images/ImageForStyling.jpg",Background)

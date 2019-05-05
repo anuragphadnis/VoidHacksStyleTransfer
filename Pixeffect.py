@@ -46,4 +46,4 @@ def upload_file():
 			return render_template(upload.html,error = "Error while storing file, Please try again")
 if __name__ == "__main__":
 	app.secret_key = os.urandom(24)
-	app.run(port=5005, debug =True)
+	app.run(port=5000, debug =True)
